@@ -1,0 +1,328 @@
+/* CSS Variables */
+:root {
+  --primary-color: rgba(13, 110, 139, 0.60);
+  --secondary-color: rgba(229, 148, 0, 0.9);
+  --overlay-color: rgba(24, 39, 51, 0.85);
+  --menu-speed: 0.75s;
+}
+
+/* CSS Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Main Styling */
+body {
+  background: var(--primary-color);
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.4;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+.container {
+  margin: auto;
+  max-width: 960px;
+  overflow: hidden;
+  padding: 0 3rem;
+}
+
+#showcase {
+  background: var(--primary-color);
+  color: #fff;
+  height: 100vh;
+  position: relative;
+}
+
+#showcase:before {
+  background: url('../images/road.jpg') no-repeat center center/cover;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+#showcase .showcase-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+}
+
+#showcase h1 {
+  font-size: 4rem;
+}
+
+#showcase p {
+  font-size: 1.3rem;
+}
+
+.btn {
+  background: var(--primary-color);
+  border: none;
+  color: #fff;
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  transition: opacity 1s ease-in-out;
+}
+
+.btn:hover {
+  opacity: 0.7;
+}
+
+/* About Us */
+#about-us {
+  height: 100vh;
+}
+
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+}
+
+.about-content {
+  color: #fff;
+  text-align: left;
+  flex: 1;
+}
+
+.about-content h1 {
+  font-size: 4rem;
+}
+
+.about-img img {
+  height: 300px;
+  width: 300px;
+  margin-left: 20px;
+  -webkit-transition: all .5s ease-in-out;
+  -moz-transition: all .5s ease-in-out;
+  -o-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  border-radius: 5px;
+}
+
+.about-img img:hover {
+  transform: rotate(15deg);
+  box-shadow: 3px 3px 5px #333;
+}
+
+/* Features */
+#features {
+  height: 100vh;
+}
+
+#features .section-header {
+  color: #fff;
+  text-align: center;
+  margin-top: 50px;
+}
+
+#features .section-header h1 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+#features .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#features .column {
+  flex-basis: 33.33%;
+  padding: 2px 5px;
+}
+
+/* Contact */
+#contact {
+  background: var(--primary-color);
+  color: #fff;
+  height: 100vh;
+  position: relative;
+}
+
+#contact::before {
+  background: url(../images/bg-image.jpg) no-repeat center center/cover;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+#contact .contact-form {
+  margin: auto;
+  max-width: 500px;
+  padding: 20px;
+}
+
+#contact .contact-form .container {
+  padding: 15px 25px;
+  margin-top: 60px;
+}
+
+#contact .contact-form .container h1, 
+#contact .contact-form .container p {
+  text-align: left;
+  color: #fff;
+}
+
+#contact .contact-form .container .form-group label {
+  color: #fff;
+  display: block;
+  margin-top: 15px;
+}
+
+#contact .contact-form .container .form-group input,
+#contact .contact-form .container .form-group textarea {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+}
+
+#contact .contact-form .container .form-group input:focus,
+#contact .contact-form .container .form-group textarea:focus {
+  outline-color: var(--primary-color);
+}
+
+#contact .contact-form .container button {
+  background-color: #1e90ff;
+  border-radius: 5px;
+  color: #fff;
+  margin-top: 20px;
+  outline: none;
+  width: 100%;
+  padding: 10px;
+}
+
+#contact .contact-form .container button:hover {
+  opacity: 0.7;
+}
+
+#contact .contact-form .container .bottom-text {
+  font-size: 0.8125rem;
+  margin-top: 25px;
+}
+
+/* Media Queries | Tablet */
+@media(max-width: 768px) {
+  #showcase h1 {
+    font-size: 3rem;
+  }
+
+  #showcase p {
+    padding: 0 2rem;
+  }
+
+  .about {
+    flex-direction: column;
+    padding: 0 20px;
+  }
+  
+  .about-content {
+    flex: none;
+  }
+  
+  .about-content h1 {
+    font-size: 3rem;
+  }
+  
+  .about-img img {
+    height: 400px;
+    width: 400px;
+    margin-top: 50px;
+    margin-left: 0;
+  }
+
+  #features {
+    height: 100vh;
+  }
+  
+  #features .section-header {
+    margin-top: 70px;
+  }
+  
+  #features .section-header h1 {
+    font-size: 3rem;
+  }
+
+  #features .column {
+    flex-basis: 50%;
+  }
+}
+
+@media(max-width: 500px) {
+  #showcase:before {
+    background: url('../images/road.jpg') no-repeat left center/cover;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+  }
+
+  #showcase h1 {
+    font-size: 2.5rem;
+  }
+
+  #showcase p {
+    font-size: 1rem;
+    padding: 0;
+  }
+
+  .about {
+    flex-direction: column;
+    padding: 0 20px;
+  }
+  
+  .about-content {
+    flex: none;
+  }
+  
+  .about-content h1 {
+    font-size: 2.5rem;
+    margin-top: 70px;
+  }
+  
+  .about-img img {
+    height: 250px;
+    width: 250px;
+    margin-top: 40px;
+    margin-left: 0;
+  }
+
+  #features {
+    height: 100%;
+    margin-bottom: 50px;
+  }
+  
+  #features .section-header {
+    margin-top: 70px;
+  }
+  
+  #features .section-header h1 {
+    font-size: 2.5rem;
+  }
+
+  #features .row {
+    flex-direction: column;
+  }
