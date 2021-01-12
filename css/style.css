@@ -326,3 +326,8 @@ img {
   #features .row {
     flex-direction: column;
   }
+
+  #contact::before {
+    background: url(../images/bg-image.jpg) no-repeat left center/cover;
+  }
+}
